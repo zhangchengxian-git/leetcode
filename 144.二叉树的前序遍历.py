@@ -17,6 +17,13 @@ class TreeNode:
 class Solution:
     def preorderTraversal(self, root: Optional[TreeNode]):
         '''
+        中左右，每个结点操作一样：输出结点，保存右节点，
+        便于接下来遍历，将当前结点变为左节点。直到当前
+        结点没有子节点，数组中最后一个保存的是其兄弟右
+        结点，将兄弟右结点当作当前结点，
+        '''
+        
+        '''
         res = []
         tmp = []
         while root:
